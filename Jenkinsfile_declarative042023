@@ -4,7 +4,7 @@ pipeline{
     label 'master'
   } 
   tools {
-    maven 'maven3.9.1'
+    maven 'Maven3.9.3'
   }
   //options{}
   //triggers{}
@@ -12,7 +12,7 @@ pipeline{
     stage('1Clone'){
       steps{
         sh "echo 'cloning the latest application version' "
-        git "https://github.com/LandmakTechnology/maven-web-application"
+        git "https://github.com/tkfred4g2/maven-repo-url.git"
         sh "echo 'latest application version available for testing and build' "
       }
     }
