@@ -22,7 +22,7 @@ pipeline{
         sh "mvn clean package" 
       }
     }
-   stage('3CodeQualityAnalysis') {
+/*   stage('3CodeQualityAnalysis') {
     steps{
         sh "echo setup sonarQube authentication"
         sh "echo 'Perfoming CodeQualityAnalysis' "
@@ -63,7 +63,7 @@ emailext body: '''Please review this job.
 LandmarkTech ''', recipientProviders: [buildUser(), developers()], subject: 'Build failed', to: 'mylandmarktech@gmail.com'
 
     }
-    
+    */
 }
 
 }
