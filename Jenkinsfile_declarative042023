@@ -1,3 +1,4 @@
+/*
 pipeline{
   agent {
     label 'master'
@@ -21,7 +22,7 @@ pipeline{
         sh "echo 'testing must passed to create artifacts ' "
         sh "mvn clean package" 
       }
-    }
+    }  */
    stage('3CodeQualityAnalysis') {
     steps{
         sh "echo setup sonarQube authentication"
@@ -29,6 +30,7 @@ pipeline{
         sh "mvn sonar:sonar"      
     }
    }
+/*
    stage('4UploadArtifacts') {
     steps{
       sh "echo configure nexus authentication"
@@ -67,3 +69,4 @@ LandmarkTech ''', recipientProviders: [buildUser(), developers()], subject: 'Bui
 }
 
 }
+*/
